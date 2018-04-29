@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F739ED22091D24F0027B4B0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F739ED12091D24F0027B4B0 /* TableViewController.swift */; };
+		3F9FF9E920962D0A004D2FB3 /* InitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FF9E820962D0A004D2FB3 /* InitData.swift */; };
 		3FE8B1F220907296007D5809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8B1F120907296007D5809 /* AppDelegate.swift */; };
-		3FE8B1F420907296007D5809 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8B1F320907296007D5809 /* ViewController.swift */; };
 		3FE8B1F720907296007D5809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE8B1F520907296007D5809 /* Main.storyboard */; };
 		3FE8B1F920907296007D5809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE8B1F820907296007D5809 /* Assets.xcassets */; };
 		3FE8B1FC20907296007D5809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE8B1FA20907296007D5809 /* LaunchScreen.storyboard */; };
 		3FE8B20720907296007D5809 /* Werkstuk_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8B20620907296007D5809 /* Werkstuk_1Tests.swift */; };
 		3FE8B21220907296007D5809 /* Werkstuk_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8B21120907296007D5809 /* Werkstuk_1UITests.swift */; };
+		3FE8B220209078A1007D5809 /* Persoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8B21F209078A1007D5809 /* Persoon.swift */; };
+		3FE8B222209091D0007D5809 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8B221209091D0007D5809 /* Address.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F739ED12091D24F0027B4B0 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		3F9FF9E820962D0A004D2FB3 /* InitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitData.swift; sourceTree = "<group>"; };
 		3FE8B1EE20907296007D5809 /* Werkstuk_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Werkstuk_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE8B1F120907296007D5809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FE8B1F320907296007D5809 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FE8B1F620907296007D5809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FE8B1F820907296007D5809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FE8B1FB20907296007D5809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		3FE8B20D20907296007D5809 /* Werkstuk_1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Werkstuk_1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE8B21120907296007D5809 /* Werkstuk_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Werkstuk_1UITests.swift; sourceTree = "<group>"; };
 		3FE8B21320907296007D5809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE8B21F209078A1007D5809 /* Persoon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persoon.swift; sourceTree = "<group>"; };
+		3FE8B221209091D0007D5809 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				3FE8B1F120907296007D5809 /* AppDelegate.swift */,
-				3FE8B1F320907296007D5809 /* ViewController.swift */,
 				3FE8B1F520907296007D5809 /* Main.storyboard */,
 				3FE8B1F820907296007D5809 /* Assets.xcassets */,
 				3FE8B1FA20907296007D5809 /* LaunchScreen.storyboard */,
 				3FE8B1FD20907296007D5809 /* Info.plist */,
+				3FE8B21F209078A1007D5809 /* Persoon.swift */,
+				3FE8B221209091D0007D5809 /* Address.swift */,
+				3F739ED12091D24F0027B4B0 /* TableViewController.swift */,
+				3F9FF9E820962D0A004D2FB3 /* InitData.swift */,
 			);
 			path = Werkstuk_1;
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE8B1F420907296007D5809 /* ViewController.swift in Sources */,
 				3FE8B1F220907296007D5809 /* AppDelegate.swift in Sources */,
+				3FE8B222209091D0007D5809 /* Address.swift in Sources */,
+				3F9FF9E920962D0A004D2FB3 /* InitData.swift in Sources */,
+				3FE8B220209078A1007D5809 /* Persoon.swift in Sources */,
+				3F739ED22091D24F0027B4B0 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +515,7 @@
 				3FE8B21820907296007D5809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FE8B21920907296007D5809 /* Build configuration list for PBXNativeTarget "Werkstuk_1Tests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +524,7 @@
 				3FE8B21B20907296007D5809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FE8B21C20907296007D5809 /* Build configuration list for PBXNativeTarget "Werkstuk_1UITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +533,7 @@
 				3FE8B21E20907296007D5809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
