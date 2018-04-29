@@ -10,7 +10,7 @@ import UIKit
 
 class InitData: NSObject {
 
-    func getData() -> Array<Persoon> {
+    class func getData() -> Array<Persoon> {
         
         var persons = [Persoon]()
         persons.insert(Persoon(firstName: "Kenny", lastName: "Maeyer", phone: 0478552368, picture: "kenny.jpg", address: Address(street: "Rue Des Freres", number: 22, zipcode: 7830, city: "Thoricourt", country: "Belgium")), at:0)

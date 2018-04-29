@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="laD-9J-8bB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="laD-9J-8bB" customClass="PersonTableViewCell" customModule="Werkstuk_1" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="laD-9J-8bB" id="Dc7-PM-82H">
@@ -62,12 +62,18 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firstname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsx-xs-HDY">
                                             <rect key="frame" x="110" y="7" width="185" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="firstname"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="firstname" destination="Dsx-xs-HDY" id="FJq-Fs-RHl"/>
+                                    <outlet property="image" destination="WhG-WU-9Lr" id="ulP-du-aT2"/>
+                                    <outlet property="lastname" destination="Ms9-Ii-w0L" id="KJs-9b-gj8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -77,9 +83,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="7lM-zR-C0L"/>
                     <connections>
-                        <outlet property="firstname" destination="Dsx-xs-HDY" id="C9Q-ID-Eo4"/>
-                        <outlet property="image" destination="WhG-WU-9Lr" id="lZi-U7-PHP"/>
-                        <outlet property="lastname" destination="Ms9-Ii-w0L" id="VPB-1l-aL0"/>
+                        <outlet property="firstname" destination="Dsx-xs-HDY" id="3yq-65-AHj"/>
+                        <outlet property="image" destination="WhG-WU-9Lr" id="Ac1-xz-AWH"/>
+                        <outlet property="lastname" destination="Ms9-Ii-w0L" id="BcA-ve-08O"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6V-w4-ArH" userLabel="First Responder" sceneMemberID="firstResponder"/>

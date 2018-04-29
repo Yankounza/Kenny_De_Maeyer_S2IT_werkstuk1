@@ -8,12 +8,21 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class PersonTableViewCell: UITableViewCell {
+    @IBOutlet weak var firstname: UILabel!
+    @IBOutlet weak var lastname: UILabel!
+    @IBOutlet weak var imagePerson: UIImageView!
+    
+}
 
+class TableViewController: UITableViewController {
+    
+    var persons: Array<Persoon> = Array()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        persons = InitData.getData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,23 +39,24 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return persons.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PersonTableViewCell
 
         // Configure the cell...
+        cell.firstname?.text = persons[indexPath.row+1].firstName
+        cell.lastname?.text = persons[indexPath.row+1].lastName
+        cell.imagePerson?.image = UIImage(named: persons[indexPath.row+1].picture)
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
