@@ -12,6 +12,15 @@ class DetailViewController: UIViewController {
 
     var item = Persoon()
     
+    @IBOutlet weak var firstname: UILabel!
+    @IBOutlet weak var lastname: UILabel!
+    @IBOutlet weak var street: UILabel!
+    @IBOutlet weak var number: UILabel!
+    @IBOutlet weak var zipcode: UILabel!
+    @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var country: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
