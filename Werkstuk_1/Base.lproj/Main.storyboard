@@ -73,6 +73,7 @@
                                     <outlet property="firstname" destination="Dsx-xs-HDY" id="FJq-Fs-RHl"/>
                                     <outlet property="image" destination="WhG-WU-9Lr" id="ulP-du-aT2"/>
                                     <outlet property="lastname" destination="Ms9-Ii-w0L" id="KJs-9b-gj8"/>
+                                    <segue destination="hJ8-Sb-LAN" kind="showDetail" identifier="detail_view" id="jIX-3F-m7g"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -91,6 +92,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6V-w4-ArH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1765.5999999999999" y="-497.00149925037488"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Y29-th-yOp">
+            <objects>
+                <viewController id="hJ8-Sb-LAN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4x9-RU-k7O"/>
+                        <viewControllerLayoutGuide type="bottom" id="aXE-Ro-rpW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tFl-Cx-fni">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lfr-Mm-5BQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2694" y="-497"/>
         </scene>
         <!--Item-->
         <scene sceneID="dla-4s-cf4">
