@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="plT-Tw-mOW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="plT-Tw-mOW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -41,7 +41,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="laD-9J-8bB" id="Dc7-PM-82H">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zAc-al-1Ul">
@@ -73,7 +73,7 @@
                                     <outlet property="firstname" destination="Dsx-xs-HDY" id="FJq-Fs-RHl"/>
                                     <outlet property="image" destination="WhG-WU-9Lr" id="ulP-du-aT2"/>
                                     <outlet property="lastname" destination="Ms9-Ii-w0L" id="KJs-9b-gj8"/>
-                                    <segue destination="hJ8-Sb-LAN" kind="showDetail" identifier="detail_view" id="iBl-JK-7pI"/>
+                                    <segue destination="hJ8-Sb-LAN" kind="show" identifier="detail_view" id="3zB-MN-yyk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -169,10 +169,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrU-k0-Nvm">
+                                <rect key="frame" x="16" y="92" width="151" height="212"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="WAh-Ed-zpG" kind="show" identifier="show_image" id="1wU-bN-KtP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="MapView" destination="Jlq-pd-44M" id="LYy-mU-nj7"/>
                         <outlet property="city" destination="J2n-hl-Qrj" id="7jd-38-az6"/>
                         <outlet property="country" destination="Uhq-fM-2kM" id="D8h-mz-NQN"/>
                         <outlet property="firstname" destination="OGC-kE-gUC" id="fzj-32-pzQ"/>
@@ -187,13 +195,40 @@
             </objects>
             <point key="canvasLocation" x="2693.5999999999999" y="-497.00149925037488"/>
         </scene>
+        <!--Image View Controller-->
+        <scene sceneID="MM4-GH-Y6q">
+            <objects>
+                <viewController id="WAh-Ed-zpG" customClass="ImageViewController" customModule="Werkstuk_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YqS-WY-bMC"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Ff-NN-ifp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x0A-dO-ESN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hor-TN-Tjd">
+                                <rect key="frame" x="16" y="100" width="343" height="489"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Hor-TN-Tjd" id="ufX-c6-HGq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MjW-Hy-0eR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3576.8000000000002" y="-497.00149925037488"/>
+        </scene>
         <!--Item-->
         <scene sceneID="dla-4s-cf4">
             <objects>
                 <navigationController id="MaA-VB-uo5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="FMa-2W-Hy1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="P5W-W2-7NG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
