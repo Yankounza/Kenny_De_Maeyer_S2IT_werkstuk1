@@ -10,7 +10,7 @@ import UIKit
 
 class ImageViewController: UIViewController {
 
-    let image = ""
+    var image = ""
     @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
