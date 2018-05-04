@@ -23,8 +23,16 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        self.firstname.text = item.firstName
+        self.lastname.text = item.lastName
+        self.street.text = item.address.street
+        self.number = item.address.number
+        self.zipcode.text = item.address.zipcode
+        self.city.text = item.address.city
+        self.country.text = item.address.country
+        self.image = UIImage(named: item.address.image)
     }
 
     override func didReceiveMemoryWarning() {
