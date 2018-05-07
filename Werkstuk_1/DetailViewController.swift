@@ -44,7 +44,9 @@ class DetailViewController: UIViewController {
             let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, radius, radius)
             mapView.setRegion(coordinateRegion, animated: true)
         }
-        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: item.address.latitude, longitude: item.address.longitude)
+        self.mapView.addAnnotation(annotation)
         centerMapOnLocation(location: location)
     }
 
