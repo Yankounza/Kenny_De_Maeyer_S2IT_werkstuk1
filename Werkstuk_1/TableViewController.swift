@@ -8,21 +8,13 @@
 
 import UIKit
 
-class PersonTableViewCell: UITableViewCell {
-    @IBOutlet weak var firstname: UILabel!
-    @IBOutlet weak var lastname: UILabel!
-    @IBOutlet weak var imagePerson: UIImageView!
-    
-}
-
 class TableViewController: UITableViewController {
     
-    var persons: Array<Persoon> = Array()
+    var persons: Array<Persoon> = InitData.getData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        persons = InitData.getData()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -48,12 +40,12 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PersonTableViewCell
+        let cell:CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
 
         // Configure the cell...
-        cell.firstname?.text = persons[indexPath.row+1].firstName
-        cell.lastname?.text = persons[indexPath.row+1].lastName
-        cell.imagePerson?.image = UIImage(named: persons[indexPath.row+1].picture)
+        cell.firstname?.text = persons[indexPath.row].firstName
+        cell.lastname?.text = persons[indexPath.row].lastName
+        cell.picture?.image = UIImage(named: persons[indexPath.row].picture)
 
         return cell
     }
