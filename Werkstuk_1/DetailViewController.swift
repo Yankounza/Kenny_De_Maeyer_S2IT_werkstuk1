@@ -56,7 +56,7 @@ class DetailViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ImageView"
+        if segue.identifier == "image_view"
         {
             let vc = segue.destination as! ImageViewController
             vc.image = self.item.picture

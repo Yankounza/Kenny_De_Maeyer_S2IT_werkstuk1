@@ -10,8 +10,9 @@ import UIKit
 
 class ImageViewController: UIViewController {
 
-    var image = ""
-    @IBOutlet var imageView: UIImageView!
+    var image:String = ""
+    @IBOutlet weak var imageView: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

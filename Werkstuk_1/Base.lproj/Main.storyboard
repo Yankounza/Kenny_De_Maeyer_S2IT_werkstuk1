@@ -172,7 +172,7 @@
                                 <rect key="frame" x="16" y="92" width="151" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="WAh-Ed-zpG" kind="show" identifier="show_image" id="1wU-bN-KtP"/>
+                                    <segue destination="WAh-Ed-zpG" kind="show" identifier="image_view" id="1wU-bN-KtP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -214,7 +214,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="Hor-TN-Tjd" id="ufX-c6-HGq"/>
+                        <outlet property="imageView" destination="Hor-TN-Tjd" id="ROj-DE-CK0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MjW-Hy-0eR" userLabel="First Responder" sceneMemberID="firstResponder"/>
