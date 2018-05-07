@@ -14,6 +14,7 @@ class MapViewController: UIViewController {
     @IBOutlet var mapView: MKMapView!
     var persons: Array<Persoon> = Array()
     var locationManager: CLLocationManager!
+    var currentLocation: CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,16 @@ class MapViewController: UIViewController {
             self.locationManager.delegate = self as? CLLocationManagerDelegate
             self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
             self.locationManager.requestAlwaysAuthorization()
+            self.locationManager.requestWhenInUseAuthorization()
             self.locationManager.startUpdatingLocation()
+            currentLocation = locationManager.location
+            if(currentLocation != nil) {
+                let radius: CLLocationDistance = 20000
+                let center = CLLocationCoordinate2D(latitude: self.currentLocation.coordinate.latitude, longitude: self.currentLocation.coordinate.longitude)
+                let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)
+                self.mapView.setRegion(region, animated: true)
+            }
+            
         }
         
         for person in persons {
@@ -40,13 +50,6 @@ class MapViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        let location = locations.last as! CLLocation
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        self.mapView.setRegion(region, animated: true)
     }
     
 
